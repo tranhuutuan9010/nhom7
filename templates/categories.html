@@ -1,0 +1,117 @@
+<!-- <!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Học Từ Vựng - {{ category_name }}</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Học Từ Vựng - {{ category_name }}</h1>
+  </header>
+  <main>
+    <h2>Danh Sách Từ Vựng</h2>
+    <div class="word-list">
+      {% for word in words %}
+        <div class="word-item">
+          <img src="/static/images/{{ word['image'] }}" alt="{{ word['word'] }}" />
+          <p>{{ word['word'] }}</p>
+          <button onclick="speakWord(/'{{ word['word'] }}'/)">Phát Âm</button>
+        </div>
+      {% else %}
+        <p>Chưa có từ vựng nào trong chủ đề này.</p>
+      {% endfor %}
+    </div>
+  </main>
+  <footer>
+    <p>© 2024 Học Từ Vựng</p>
+  </footer>
+
+  <script>
+    function speakWord(word) {
+      const utterance = new SpeechSynthesisUtterance(word);
+      utterance.lang = 'en-US';  
+      window.speechSynthesis.speak(utterance);
+    }
+  </script>
+</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Học Từ Vựng - {{ category_name }}</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Học Từ Vựng - {{ category_name }}</h1>
+  </header>
+  <main>
+    <h2>Danh Sách Từ Vựng</h2>
+    <div class="word-list">
+      {% for word in words %}
+        <div class="word-item">
+          <img src="/static/images/{{ word.image }}" alt="{{ word.word }}" />
+          <p>{{ word.word }}</p>
+          <button onclick="speakWord('{{ word.word }}')">Phát Âm</button>
+        </div>
+      {% else %}
+        <p>Chưa có từ vựng nào trong chủ đề này.</p>
+      {% endfor %}
+    </div>
+  </main>
+  <footer>
+    <p>© 2024 Học Từ Vựng</p>
+  </footer>
+
+  <script>
+    function speakWord(word) {
+      const utterance = new SpeechSynthesisUtterance(word);
+      utterance.lang = 'en-US';  
+      window.speechSynthesis.speak(utterance);
+    }
+  </script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Học Từ Vựng - {{ category_name }}</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Học Từ Vựng - {{ category_name }}</h1>
+  </header>
+  <main>
+    <h2>Danh Sách Từ Vựng</h2>
+    <div class="word-list">
+      {% for word in words %}
+        <div class="word-item">
+          <img src="/static/images/{{ word.image }}" alt="{{ word.word }}" />
+          <p>{{ word.word }}</p>
+          <button onclick="speakWord('{{ word.word }}')">Phát Âm</button>
+        </div>
+      {% else %}
+        <p>Chưa có từ vựng nào trong chủ đề này.</p>
+      {% endfor %}
+    </div>
+  </main>
+  <footer>
+    <p>© 2024 Học Từ Vựng</p>
+  </footer>
+
+  <script>
+    function speakWord(word) {
+      const utterance = new SpeechSynthesisUtterance(word);
+      utterance.lang = 'en-US';  
+      window.speechSynthesis.speak(utterance);
+    }
+  </script>
+</body>
+</html>

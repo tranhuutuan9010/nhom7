@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng Nhập</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Giọng Bé Thông Minh</h1>
+    <nav>
+      <a href="/login">Đăng nhập</a>
+      <a href="/register">Đăng ký</a>
+      <a href="#">Trợ giúp</a>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <h2 class="section-title">Đăng Nhập</h2>
+    <div class="container1">
+      <div class="card1">
+        <h3>Chào mừng trở lại!</h3>
+        <form id="loginForm" method="POST" action="/login">
+          <div class="input-group1">
+            <label for="username">Tên người dùng</label>
+            <input type="text" id="username" name="username" placeholder="Nhập tên người dùng" required>
+          </div>
+          <div class="input-group1">
+            <label for="password">Mật khẩu</label>
+            <input type="password" id="password" name="password" placeholder="Nhập mật khẩu" required>
+          </div>
+          <button type="submit" class="login-btn">Đăng Nhập</button>
+        </form>
+        <p id="error-message" style="color: red; display: none;">Sai tên người dùng hoặc mật khẩu.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- JavaScript để xử lý lỗi phía frontend -->
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      if (!username || !password) {
+        event.preventDefault();
+        document.getElementById('error-message').textContent = "Vui lòng nhập đầy đủ thông tin.";
+        document.getElementById('error-message').style.display = "block";
+      }
+    });
+  </script>
+</body>
+</html>

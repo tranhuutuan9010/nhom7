@@ -1,0 +1,9 @@
+source venv/bin/activate
+python app.py
+
+SELECT * FROM categories;
+
+
+
+
+

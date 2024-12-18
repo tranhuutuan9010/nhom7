@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang Chính - Học Từ Vựng</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Chọn Chủ Đề Học</h1>
+  </header>
+
+  <main>
+    <h2 class="section-title">Chủ Đề</h2>
+    <div class="container">
+      {% for category in categories %}
+        <a href="/learn/{{ category.id }}" class="category-card">
+          <div class="card-content">
+            <img src="/static/images/{{ category.image_path if category.image_path else 'default.png' }}" 
+                 alt="{{ category.name }}" class="category-image">
+            <h3 class="category-title">{{ category.name }}</h3>
+          </div>
+        </a>
+      {% else %}
+        <p>Không có chủ đề nào để hiển thị.</p>
+      {% endfor %}
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2024 Học Từ Vựng</p>
+  </footer>
+</body>
+</html>
